@@ -157,7 +157,8 @@ class AutonomousWebContentScraperAndAnalyzer:
         keywords = self.content_analyzer.analyze_keywords(combined_text)
         entities = self.content_analyzer.analyze_entities(combined_text)
 
-        df = pd.DataFrame({'Sentiment': sentiment_scores, 'Summary': summaries})
+        df = pd.DataFrame(
+            {'Sentiment': sentiment_scores, 'Summary': summaries})
         print(df.head())
         print("Keywords:", keywords)
         print("Entities:", entities)
